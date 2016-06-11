@@ -4,6 +4,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { App, UserListApp, UserDetailApp } from '../containers';
 
 let store = configureStore();
+
 /* react router 2.x 必须配置 browserHistory */
 const routes = (
     <Router history={browserHistory}>
