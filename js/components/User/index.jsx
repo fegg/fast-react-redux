@@ -8,13 +8,17 @@ class User extends Component {
         super(props);
     }
 
+    _handleClick() {
+        console.log(this);
+    }
+
     render() {
         const { id, name } = this.props;
         const detail = `/users/${id}`;
 
         return (
             <div className="user">
-                <h3>{id}</h3>
+                <h3 onClick={this._handleClick.bind(this)}>{id}</h3>
                 <Link to={detail}>{name}</Link>
             </div>
         );
