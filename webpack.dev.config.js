@@ -9,7 +9,7 @@ var config = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'static'),
-        publicPath: '/static/'
+        publicPath: '/static'
     },
     module: {
         loaders: [{
