@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class UserDetailApp extends Component {
-    render() {
+class RegisterApp extends Component {
+    render () {
         return (
             <div>
-                UserDetailApp
+                RegisterApp
             </div>
         );
     }
 }
 
-export default UserDetailApp;
+export default RegisterApp;

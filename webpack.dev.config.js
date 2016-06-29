@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-    devtool: '#eval-source-map',
+    devtool: 'source-map',
     entry: {
         index: path.resolve(__dirname, 'js/index.jsx') 
     },
@@ -20,10 +20,14 @@ var config = {
             test: /\.css$/,
             exclude: /node_modules/,
             loaders: ['style', 'css']
+        }, {
+            test: /\.scss$/,
+            exclude: /node_modules/,
+            loaders: ['style', 'css', 'sass']
         }]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx', '.css']
+        extensions: ['', '.js', '.jsx', '.css', 'scss']
     },
     plugins: [
         new webpack.DefinePlugin({
