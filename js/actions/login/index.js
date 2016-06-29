@@ -7,7 +7,7 @@ function fetchUsers () {
 
 export function searchUsers(username) {
     return function (dispatch) {
-        return fetchUsers().then((ret) => {
+        return fetchUsers().then(ret => {
             if(ret.status === 200) {
                 dispatch(userExists(ret.data, username))
             }
